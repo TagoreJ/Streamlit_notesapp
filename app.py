@@ -122,7 +122,7 @@ else:
         tokens = get_tokens_for_note(note_id)
         if tokens:
             st.markdown("**Share these links:**")
-            base_url = "http://localhost:8501"  # Change to your Streamlit Cloud URL after deployment
+            base_url = "http://genonotes.streamlit.app"  # Change to your Streamlit Cloud URL after deployment
             for t, _ in tokens:
                 params = {"view": "viewer", "id": note_id, "token": t}
                 share_url = f"{base_url}/?{urlencode(params)}"
